@@ -109,10 +109,13 @@
   </main>
   <footer class="footer">КАФЕ «ВЕЧЕРИНКА» · ВКУСНЫЕ МОМЕНТЫ ВМЕСТЕ</footer>
   <script>
+    const welcomeSeenKey='vecherinka-welcome-seen';
+    try{if(localStorage.getItem(welcomeSeenKey)==='1')document.body.classList.add('entered')}catch{}
     document.getElementById('enter-menu').addEventListener('click',event=>{
       const startButton=event.currentTarget;
       if(startButton.disabled)return;
       startButton.disabled=true;
+      try{localStorage.setItem(welcomeSeenKey,'1')}catch{}
       const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       document.body.classList.add('entering');
       window.setTimeout(()=>{
