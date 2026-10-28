@@ -29,7 +29,8 @@
   <style>
     .welcome .script{font-size:clamp(21px,7.4vw,64px)}
     .welcome-frame{max-width:none}
-    .welcome .script{display:flex;width:100%;max-width:100%;justify-content:space-between;align-items:baseline;animation:fitWrite 2.4s steps(28,end) .35s forwards,caret .8s step-end 4;text-align:left;margin-left:0;margin-right:auto}
+    .welcome:before{right:12px}
+    .welcome .script{display:flex;width:calc(100% + min(3vw, 10px));max-width:none;justify-content:space-between;align-items:baseline;animation:fitWrite 2.4s steps(28,end) .35s forwards,caret .8s step-end 4;text-align:left;margin-left:0;margin-right:auto}
     @keyframes fitWrite{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
     @media(prefers-reduced-motion:reduce){.welcome .script{width:auto;clip-path:none;border:0;animation:none}}
     .welcome h1{animation-delay:2.2s}
