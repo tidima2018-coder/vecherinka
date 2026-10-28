@@ -179,6 +179,7 @@
     reserveButton.addEventListener('click',()=>toggleBooking(reserveButton.getAttribute('aria-expanded')!=='true'));
     document.addEventListener('click',event=>{if(!bookingPanel.contains(event.target)&&!reserveButton.contains(event.target))toggleBooking(false)});
     document.addEventListener('keydown',event=>{if(event.key==='Escape')toggleBooking(false)});
+    window.addEventListener('scroll',()=>{if(bookingPanel.classList.contains('open'))toggleBooking(false)},{passive:true});
   </script>
 </body>
 </html>
