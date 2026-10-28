@@ -41,8 +41,8 @@
     .menu-card .card-head:before{content:none}
     .menu-card .card-head h3{margin:0;color:#49332b;font-size:25px;text-shadow:none}
     .menu-card .card-head small{color:#8c725c;letter-spacing:.16em}
-    .menu-icon{width:42px;height:42px;color:#624638;filter:drop-shadow(0 2px 1px #49332b12)}
-    .menu-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .menu-icon{width:48px;height:48px;color:#624638;filter:drop-shadow(0 2px 1px #49332b12)}
+    .menu-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
     @media(max-width:800px){.menu-card .card-head{height:150px}}
     .welcome{transition:opacity .42s ease,transform .42s ease}
     .entering .welcome{opacity:0;transform:scale(1.025);pointer-events:none}
@@ -153,9 +153,9 @@
       ]}
     ];
     const menuIcons=[
-      '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 6h12l-1.5 11a4.5 4.5 0 0 1-9 0L7 6Zm6 16v18m-5 3h10M29 7l11-3 2.5 11a5 5 0 0 1-9.8 2.2L29 7Zm7 13-4 18m-5 4 10-2"/></svg>',
-      '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5c-3 4-5 7-5 10a5 5 0 0 0 10 0c0-3-2-6-5-10Z"/><path d="M19 20h10v22H19zM15 43h18M24 20v-3"/></svg>',
-      '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 6v12m5-12v12m5-12v12m-13 1h16c0 5-3 8-8 8s-8-3-8-8Zm8 8v18m-4 3h8M34 6c0 10 0 15 5 19l-3 21m-2-40v14c0 3 2 5 5 6"/></svg>'
+      '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 8h18l-2 15a7 7 0 0 1-14 0L10 8Zm9 23v20m-8 4h16M39 8l17-3 3 14a7 7 0 0 1-14 2L39 8Zm11 20-5 23m-7 4 14-3"/></svg>',
+      '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5c-4 5-7 9-7 14a7 7 0 0 0 14 0c0-5-3-9-7-14Z"/><path d="M27 26h10v26H27zM22 55h20M32 26v-3"/></svg>',
+      '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 8v16m7-16v16m7-16v16m7-16v16m-22 1h29c0 7-6 12-14.5 12S12 32 12 25Zm14.5 12v16m-7 4h14M50 8c0 13-1 20-9 27l4 20m5-47v20"/></svg>'
     ];
     const escapeHtml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
     document.querySelector('.menus').innerHTML=menuData.map((card,index)=>`<article id="${['banquet-menu','memorial-menu','general-menu'][index]}" class="menu-card"><div class="card-head"><span class="menu-icon">${menuIcons[index]}</span><h3>${escapeHtml(card.title)}<small>${escapeHtml(card.sub)}</small></h3></div><div class="card-body">${card.groups.map(([group,items])=>`<h4 class="category">${escapeHtml(group)}</h4>${items.map(([name,price,description])=>`<div class="dish"><span>${escapeHtml(name)}</span>${price?`<i class="dots"></i><span class="price">${escapeHtml(price)}</span>`:''}</div>${description?`<p class="dish-description">${escapeHtml(description)}</p>`:''}`).join('')}`).join('')}</div></article>`).join('');
