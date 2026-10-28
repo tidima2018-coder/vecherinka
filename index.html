@@ -155,7 +155,7 @@
     const menuIcons=[
       '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 8h18l-2 15a7 7 0 0 1-14 0L10 8Zm9 23v20m-8 4h16M39 8l17-3 3 14a7 7 0 0 1-14 2L39 8Zm11 20-5 23m-7 4 14-3"/></svg>',
       '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5c-4 5-7 9-7 14a7 7 0 0 0 14 0c0-5-3-9-7-14Z"/><path d="M27 26h10v26H27zM22 55h20M32 26v-3"/></svg>',
-      '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 8v16m7-16v16m7-16v16m7-16v16m-22 1h29c0 7-6 12-14.5 12S12 32 12 25Zm14.5 12v16m-7 4h14M50 8c0 13-1 20-9 27l4 20m5-47v20"/></svg>'
+      '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 8v14m6-14v14m6-14v14m6-14v14M8 23h22c0 6-4 10-11 10S8 29 8 23Zm11 10v20m-7 4h14M46 7c-6 0-10 7-10 15 0 7 4 12 10 12s10-5 10-12C56 14 52 7 46 7Zm0 27v19m-6 4h12"/></svg>'
     ];
     const escapeHtml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
     document.querySelector('.menus').innerHTML=menuData.map((card,index)=>`<article id="${['banquet-menu','memorial-menu','general-menu'][index]}" class="menu-card"><div class="card-head"><span class="menu-icon">${menuIcons[index]}</span><h3>${escapeHtml(card.title)}<small>${escapeHtml(card.sub)}</small></h3></div><div class="card-body">${card.groups.map(([group,items])=>`<h4 class="category">${escapeHtml(group)}</h4>${items.map(([name,price,description])=>`<div class="dish"><span>${escapeHtml(name)}</span>${price?`<i class="dots"></i><span class="price">${escapeHtml(price)}</span>`:''}</div>${description?`<p class="dish-description">${escapeHtml(description)}</p>`:''}`).join('')}`).join('')}</div></article>`).join('');
