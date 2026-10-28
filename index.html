@@ -56,7 +56,8 @@
     .entered .reserve{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#634638,#49332b);color:#fffaf3;border:1px solid #b99573;padding:12px 19px;box-shadow:0 5px 16px #49332b24;font-weight:700;letter-spacing:.02em;text-decoration:none}
     .entered .reserve:before{content:'✦';font-size:12px;color:#e7c49f}
     .entered .reserve:hover{background:#694a3b;box-shadow:0 8px 20px #49332b30}
-    .booking-panel .booking-call,.booking-panel .booking-whatsapp{color:#fffaf3;transition:transform .2s,filter .2s}.booking-panel .booking-call{background:#49332b}.booking-panel .booking-whatsapp{background:#42684a}.booking-panel .booking-call:hover,.booking-panel .booking-whatsapp:hover{filter:brightness(1.1);transform:translateY(-1px)}.booking-panel .icon{background:#ffffff24;color:#fffaf3}.booking-panel em{color:#f4e5d6}
+    .booking-panel .booking-call,.booking-panel .booking-whatsapp{color:#fffaf3;transition:transform .2s,filter .2s}.booking-panel .booking-call{background:#49332b}.booking-panel .booking-whatsapp{background:#42684a}.booking-panel .booking-call:hover,.booking-panel .booking-whatsapp:hover{filter:brightness(1.1);transform:translateY(-1px)}.booking-panel .icon{background:#ffffff24;color:#fffaf3}.booking-panel .icon svg{width:18px;height:18px;display:block;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.booking-panel em{color:#f4e5d6}
+    .contact-links a svg{width:18px;height:18px;display:block;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
     .menu-nav{position:sticky;top:10px;z-index:4;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px auto 10px;padding:7px;border:1px solid #e4d6c6;background:#eee5daeF;border-radius:18px;box-shadow:inset 0 1px #fff8,0 8px 22px #49332b0a;backdrop-filter:blur(10px)}
     .menu-nav button{min-height:54px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 14px;border:1px solid transparent;border-radius:12px;background:transparent;color:#79695d;font:600 13px 'Playfair Display',serif;cursor:pointer;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
     .menu-nav button:hover{background:#fffaf3;color:var(--brown);transform:translateY(-1px)}
@@ -78,8 +79,8 @@
   </section>
   <header class="topbar"><div class="mini-brand">КАФЕ · ВЕЧЕРИНКА</div><button class="reserve" id="reserve" type="button" aria-expanded="false" aria-controls="booking">Забронировать</button></header>
   <aside class="booking-panel" id="booking" aria-hidden="true">
-    <a class="booking-call" href="tel:+77472207519"><span class="icon">☎</span><span>Позвонить<em>8 747 220 75 19</em></span></a>
-    <a class="booking-whatsapp whatsapp" href="https://wa.me/77715165005" target="_blank" rel="noopener"><span class="icon">✉</span><span>Написать в WhatsApp<em>8 771 516 50 05</em></span></a>
+    <a class="booking-call" href="tel:+77472207519"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.8h3l1.5 4.1-2 1.6a14 14 0 0 0 5.4 5.4l1.6-2 4.1 1.5v3a1.8 1.8 0 0 1-1.8 1.8A13.6 13.6 0 0 1 4.8 7.3a1.8 1.8 0 0 1 1.8-1.8Z"/></svg></span><span>Позвонить<em>8 747 220 75 19</em></span></a>
+    <a class="booking-whatsapp whatsapp" href="https://wa.me/77715165005" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.7a8.1 8.1 0 0 1-12 7L4 20l1.2-4a8.1 8.1 0 1 1 15-4.3Z"/><path d="M9 8.3c.2-.5.5-.7.8-.7h.5c.2 0 .4.2.5.4l.7 1.7c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4 0 .7.5.8 1.2 1.4 2 1.8.3.2.5.2.7-.1l.7-.8c.2-.2.4-.3.7-.2l1.6.8c.3.1.4.3.4.5 0 .5-.2 1.2-.8 1.6-.5.4-1.1.5-1.7.4-1-.2-2.3-.8-3.6-2-1.2-1.1-2-2.6-2.2-3.7-.2-.8.1-1.4.5-1.7Z"/></svg></span><span>Написать в WhatsApp<em>8 771 516 50 05</em></span></a>
   </aside>
   <main>
     <section class="hero" aria-label="Кафе Вечеринка">
@@ -105,7 +106,7 @@
         <h4 class="category">Десерты</h4><div class="dish"><span>Чизкейк</span><i class="dots"></i><span class="price">1 200</span></div><div class="dish"><span>Наполеон</span><i class="dots"></i><span class="price">1 000</span></div><div class="dish"><span>Мороженое</span><i class="dots"></i><span class="price">700</span></div>
       </div></article>
     </section>
-    <section class="contact"><div class="wrap"><div class="eyebrow">Мы всегда на связи</div><h2>Будем рады вам</h2><p>Позвоните или напишите — поможем выбрать меню и оформить заказ.</p><div class="contact-links"><a href="tel:+77472207519">☎ &nbsp; Позвонить</a><a class="wa whatsapp" href="https://wa.me/77715165005" target="_blank" rel="noopener">✉ &nbsp; WhatsApp</a></div></div></section>
+    <section class="contact"><div class="wrap"><div class="eyebrow">Мы всегда на связи</div><h2>Будем рады вам</h2><p>Позвоните или напишите — поможем выбрать меню и оформить заказ.</p><div class="contact-links"><a href="tel:+77472207519"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.8h3l1.5 4.1-2 1.6a14 14 0 0 0 5.4 5.4l1.6-2 4.1 1.5v3a1.8 1.8 0 0 1-1.8 1.8A13.6 13.6 0 0 1 4.8 7.3a1.8 1.8 0 0 1 1.8-1.8Z"/></svg>Позвонить</a><a class="wa whatsapp" href="https://wa.me/77715165005" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.7a8.1 8.1 0 0 1-12 7L4 20l1.2-4a8.1 8.1 0 1 1 15-4.3Z"/><path d="M9 8.3c.2-.5.5-.7.8-.7h.5c.2 0 .4.2.5.4l.7 1.7c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4 0 .7.5.8 1.2 1.4 2 1.8.3.2.5.2.7-.1l.7-.8c.2-.2.4-.3.7-.2l1.6.8c.3.1.4.3.4.5 0 .5-.2 1.2-.8 1.6-.5.4-1.1.5-1.7.4-1-.2-2.3-.8-3.6-2-1.2-1.1-2-2.6-2.2-3.7-.2-.8.1-1.4.5-1.7Z"/></svg>WhatsApp</a></div></div></section>
   </main>
   <footer class="footer">КАФЕ «ВЕЧЕРИНКА» · ВКУСНЫЕ МОМЕНТЫ ВМЕСТЕ</footer>
   <script>
